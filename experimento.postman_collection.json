@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "03d4cbba-ecd8-4895-a418-5a5d32564bdb",
+		"name": "experimento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "singIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "34.36.213.106/users",
+					"host": [
+						"34",
+						"36",
+						"213",
+						"106"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "34.36.213.106//users/auth",
+					"host": [
+						"34",
+						"36",
+						"213",
+						"106"
+					],
+					"path": [
+						"",
+						"users",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5NTAwNjcwMywianRpIjoiOTFmNDlhMmItNzIzYS00ZWRkLWI3YjEtMjUwMzEwNmNkNTczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjk1MDA2NzAzLCJleHAiOjE2OTUwMTAzMDMsImlkIjoiMSJ9.rxiWKgthMxhq4CIR37_DiLeJAkX1iKSbskt-tN9TPsM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "34.36.213.106/users/me",
+					"host": [
+						"34",
+						"36",
+						"213",
+						"106"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "34.36.213.106/users/ping",
+					"host": [
+						"34",
+						"36",
+						"213",
+						"106"
+					],
+					"path": [
+						"users",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
